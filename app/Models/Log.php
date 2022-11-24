@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Log extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    protected $fillable = [
+        'request_method',
+        'request_url',
+        'response_http_code',
+        'response_body'
+    ];
 }
